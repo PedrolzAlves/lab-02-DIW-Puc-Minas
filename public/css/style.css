@@ -1,0 +1,108 @@
+:root {
+  --cor-fundo: #f6f6f4;
+  --cor-texto: #1c1c1c;
+  --cor-borda: #e4e4e0;
+  --cor-destaque: #2f6f5e;
+  --raio: 12px;
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+.text-accent { color: var(--cor-destaque); }
+
+.navbar-brand { font-weight: 700; letter-spacing: -0.02em; }
+.nav-link.active { font-weight: 600; }
+
+/* Cabeçalho das páginas internas */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: end;
+  margin: 2.5rem 0 1.5rem;
+}
+.page-header h1 { font-size: 1.6rem; font-weight: 700; margin: 0; }
+.page-header p { color: #6c6c6c; margin: 0.25rem 0 0; }
+
+/* Superfícies */
+.superficie {
+  background: #fff;
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  overflow: hidden;
+}
+
+.table { margin: 0; }
+.table th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6c6c6c;
+  font-weight: 600;
+  background: #fafaf8;
+}
+.table td, .table th { padding: 0.9rem 1rem; vertical-align: middle; }
+.table tbody tr:last-child td { border-bottom: 0; }
+
+.form-control, .form-select, .btn { border-radius: 8px; }
+.form-label { font-size: 0.875rem; font-weight: 500; }
+
+.btn-dark { background: var(--cor-texto); }
+.modal-content { border: 0; border-radius: var(--raio); }
+
+/* Status do pedido */
+.status {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.status-pendente   { background: #fff4d6; color: #8a6100; }
+.status-aprovado   { background: #dcf3e6; color: #1d6b41; }
+.status-reprovado  { background: #fde2e1; color: #a1302a; }
+.status-cancelado  { background: #ececec; color: #555; }
+.status-contratado { background: #dde9ff; color: #2849a0; }
+
+/* Tela de login / cadastro */
+.auth {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.auth-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+}
+.auth-form > div { width: 100%; max-width: 380px; }
+
+/* Espaço reservado para sua imagem (public/img/capa.jpg) */
+.img-slot {
+  position: relative;
+  background: #e9ebe6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8a8f86;
+  font-size: 0.9rem;
+}
+.img-slot img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .auth { grid-template-columns: 1fr; }
+  .auth .img-slot { min-height: 180px; }
+}

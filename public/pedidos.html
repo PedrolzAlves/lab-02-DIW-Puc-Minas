@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedidos · AlugaCar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <header id="navbar"></header>
+
+  <main class="container pb-5">
+    <div class="page-header">
+      <div>
+        <h1 id="titulo">Pedidos de aluguel</h1>
+        <p id="subtitulo">Acompanhe o status de cada pedido.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <select class="form-select" id="filtro-status" aria-label="Filtrar por status" style="width: auto;">
+          <option value="">Todos os status</option>
+        </select>
+        <button class="btn btn-dark text-nowrap d-none" id="btn-novo">Novo pedido</button>
+      </div>
+    </div>
+
+    <div id="alertas"></div>
+
+    <div class="superficie table-responsive">
+      <table class="table">
+        <thead id="cabecalho"></thead>
+        <tbody id="tabela"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Modal: criar / modificar pedido -->
+  <div class="modal fade" id="modal-pedido" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="form-pedido" novalidate>
+        <div class="modal-header border-0">
+          <h2 class="modal-title h5" id="pedido-titulo">Pedido</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <div id="erros-pedido"></div>
+          <div class="mb-3">
+            <label class="form-label" for="automovelId">Automóvel</label>
+            <select class="form-select" id="automovelId" name="automovelId" required></select>
+          </div>
+          <div class="row g-3 mb-3">
+            <div class="col-6">
+              <label class="form-label" for="dataInicio">Retirada</label>
+              <input class="form-control" type="date" id="dataInicio" name="dataInicio" required>
+            </div>
+            <div class="col-6">
+              <label class="form-label" for="dataFim">Devolução</label>
+              <input class="form-control" type="date" id="dataFim" name="dataFim" required>
+            </div>
+          </div>
+          <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="usarCredito">
+            <label class="form-check-label" for="usarCredito">Solicitar contrato de crédito</label>
+          </div>
+          <select class="form-select d-none" id="bancoCreditoId" name="bancoCreditoId" aria-label="Banco"></select>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-dark">Salvar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: avaliação financeira (agente) -->
+  <div class="modal fade" id="modal-avaliar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h2 class="modal-title h5">Avaliar pedido</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <dl class="row small mb-3" id="avaliar-resumo"></dl>
+          <label class="form-label" for="parecer">Parecer financeiro</label>
+          <textarea class="form-control" id="parecer" rows="3" placeholder="Justificativa da decisão"></textarea>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-danger" data-decisao="Reprovado">Reprovar</button>
+          <button type="button" class="btn btn-dark" data-decisao="Aprovado">Aprovar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: execução do contrato (agente) -->
+  <div class="modal fade" id="modal-contrato" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <form class="modal-content" id="form-contrato">
+        <div class="modal-header border-0">
+          <h2 class="modal-title h5">Executar contrato</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="small text-secondary" id="contrato-info"></p>
+          <label class="form-label" for="proprietario">Registrar automóvel como propriedade de</label>
+          <select class="form-select" id="proprietario" required></select>
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="submit" class="btn btn-dark">Confirmar contrato</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/controller/pedidos.js"></script>
+</body>
+</html>

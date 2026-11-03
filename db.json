@@ -1,0 +1,115 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nome": "Maria Silva",
+      "rg": "MG-12.345.678",
+      "cpf": "12345678901",
+      "endereco": "Rua das Flores, 100 - Belo Horizonte/MG",
+      "profissao": "Engenheira",
+      "login": "maria",
+      "senha": "123",
+      "rendimentos": [
+        {
+          "entidade": "Construtora Horizonte",
+          "valor": 6500
+        },
+        {
+          "entidade": "Consultoria Própria",
+          "valor": 1200
+        }
+      ]
+    },
+    {
+      "nome": "Pedro Luiz dos Santos Alves",
+      "login": "pedro",
+      "senha": "123123",
+      "rg": "MG17846118",
+      "cpf": "16864973697",
+      "endereco": "Rua Catadupas, 60 Bl.2 Apto 101",
+      "profissao": "Auxiliar Administrativo",
+      "rendimentos": [
+        {
+          "entidade": "Difarmig",
+          "valor": 1200
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "agentes": [
+    {
+      "id": 1,
+      "nome": "Locadora Alfa",
+      "tipo": "empresa",
+      "cnpj": "11222333000144",
+      "login": "empresa",
+      "senha": "123"
+    },
+    {
+      "id": 2,
+      "nome": "Banco Beta",
+      "tipo": "banco",
+      "cnpj": "55666777000188",
+      "login": "banco",
+      "senha": "123"
+    }
+  ],
+  "automoveis": [
+    {
+      "id": 1,
+      "matricula": "MAT-0001",
+      "ano": 2022,
+      "marca": "Volkswagen",
+      "modelo": "Gol",
+      "placa": "ABC1D23",
+      "proprietarioTipo": "empresa",
+      "proprietarioId": 1
+    },
+    {
+      "id": 2,
+      "matricula": "MAT-0002",
+      "ano": 2023,
+      "marca": "Fiat",
+      "modelo": "Argo",
+      "placa": "DEF4G56",
+      "proprietarioTipo": "empresa",
+      "proprietarioId": 1
+    },
+    {
+      "id": 3,
+      "matricula": "MAT-0003",
+      "ano": 2024,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "placa": "HIJ7K89",
+      "proprietarioTipo": "banco",
+      "proprietarioId": 2
+    }
+  ],
+  "pedidos": [
+    {
+      "id": 1,
+      "clienteId": 1,
+      "automovelId": 1,
+      "dataInicio": "2026-11-10",
+      "dataFim": "2026-11-20",
+      "bancoCreditoId": null,
+      "status": "Pendente",
+      "parecer": "",
+      "avaliadorId": null
+    },
+    {
+      "clienteId": 2,
+      "automovelId": 3,
+      "dataInicio": "2026-11-11",
+      "dataFim": "2026-11-17",
+      "bancoCreditoId": 2,
+      "status": "Pendente",
+      "parecer": "",
+      "avaliadorId": null,
+      "id": 2
+    }
+  ],
+  "contratos": []
+}

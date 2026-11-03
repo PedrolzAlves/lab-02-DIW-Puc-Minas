@@ -1,0 +1,2 @@
+Coloque aqui a imagem da tela de login com o nome "capa.jpg".
+Enquanto ela não existir, a tela mostra um espaço reservado neutro.
