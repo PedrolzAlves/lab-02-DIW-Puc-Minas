@@ -55,7 +55,6 @@
 ---
 
 ## 🔗 Links Úteis
-* 📄 **Enunciado:** LAB02, Sistema de Aluguel de Carros (DIW, PUC Minas)
 * 📐 **Diagramas UML:** [docs/diagramas](./docs/diagramas)
 * 📖 **Template do README:** [template_README.md](https://github.com/joaopauloaramuni/desenvolvimento-de-interfaces-web/blob/main/TEMPLATES/template_README.md)
 
@@ -63,7 +62,7 @@
 
 ## 📝 Sobre o Projeto
 
-**Contexto:** projeto acadêmico do 2º período de Engenharia de Software da PUC Minas, na disciplina de Desenvolvimento de Interfaces Web, ministrada pelo Prof. João Paulo Carneiro Aramuni.
+**Contexto:** projeto acadêmico do 2º período de Ciência da Computação da PUC Minas, na disciplina de Desenvolvimento de Interfaces Web, ministrada pelo Prof. João Paulo Carneiro Aramuni.
 
 **Problema:** empresas de aluguel de automóveis precisam de um canal on-line para receber pedidos, analisá-los financeiramente e formalizar contratos, envolvendo clientes, empresas e bancos.
 
@@ -314,7 +313,7 @@ Testes manuais sugeridos (roteiro da apresentação):
 
 | 👤 Nome | 🖼️ Foto | :octocat: GitHub | 💼 LinkedIn | 📤 Gmail |
 |---------|----------|-----------------|-------------|-----------|
-| Seu Nome | <div align="center"><img src="https://github.com/PedrolzAlves.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/PedrolzAlves"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/seu-perfil"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:pedrolsa2006@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
+| Pedro Luiz | <div align="center"><img src="https://github.com/PedrolzAlves.png" width="70px" height="70px"></div> | <div align="center"><a href="https://github.com/PedrolzAlves"><img src="https://joaopauloaramuni.github.io/image/github6.png" width="50px" height="50px"></a></div> | <div align="center"><a href="https://www.linkedin.com/in/seu-perfil"><img src="https://joaopauloaramuni.github.io/image/linkedin2.png" width="50px" height="50px"></a></div> | <div align="center"><a href="mailto:pedrolsa2006@gmail.com"><img src="https://joaopauloaramuni.github.io/image/gmail3.png" width="50px" height="50px"></a></div> |
 
 ---
 
